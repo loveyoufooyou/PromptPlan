@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem
+        id="menu_prompt_plan"
+        name="Prompt Plan"
+        sequence="60">
+        <menuitem
+            id="menu_prompt_task"
+            name="Prompt Task"
+            action="prompt_task_view_action"
+            sequence="10" />
+        <menuitem
+            id="menu_prompt_template"
+            name="Prompt Template"
+            action="prompt_template_view_action"
+            sequence="20" />
+        <menuitem
+            id="menu_test_project"
+            name="Project"
+            action="prompt_template_test_project_view_action"
+            sequence="30" />
+        <menuitem id="menu_prompt_settings" name="Settings" sequence="200">
+            <menuitem
+                id="menu_base_lookup_type_view"
+                name="Lookup Types"
+                action="base_lookup_type_view_action"
+                sequence="10" />
+        </menuitem>
+    </menuitem>
+</odoo>

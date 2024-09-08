@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="base_lookup_type_view_tree" model="ir.ui.view">
+        <field name="name">base_lookup_type_view_tree</field>
+        <field name="model">base.lookup.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" required="1" />
+                <field name="code" required="1" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="base_lookup_type_view_form" model="ir.ui.view">
+        <field name="name">base_lookup_type_view_form</field>
+        <field name="model">base.lookup.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group name="left">
+                            <field name="name" />
+                            <field name="description" />
+                        </group>
+                        <group name="right">
+                            <field name="code" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="values" string="values">
+                            <field name="value_ids">
+                                <tree editable="bottom">
+                                    <field name="name" required="1" />
+                                    <field name="code" required="1" />
+                                    <field name="value" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="base_lookup_type_view_action" model="ir.actions.act_window">
+        <field name="name">Base Lookup Type</field>
+        <field name="res_model">base.lookup.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

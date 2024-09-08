@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="lookup_python_environment" model="base.lookup.type">
+            <field name="name">Python Environment</field>
+            <field name="code">PythonEnvironment</field>
+        </record>
+        <record id="lookup_model" model="base.lookup.type">
+            <field name="name">Model</field>
+            <field name="code">Model</field>
+        </record>
+        <record id="lookup_invoke_model" model="base.lookup.type">
+            <field name="name">Invoke Model</field>
+            <field name="code">InvokeModel</field>
+        </record>
+        <record id="lkv_python3" model="base.lookup.value">
+            <field name="name">Python3</field>
+            <field name="code">py3</field>
+            <field name="value">python3</field>
+            <field name="type_id" ref="lookup_python_environment" />
+        </record>
+        <record id="lkv_subprocess_invoke" model="base.lookup.value">
+            <field name="name">Subprocess Invoke</field>
+            <field name="code">SubprocessInvoke</field>
+            <field name="value">subprocess.invoke</field>
+            <field name="type_id" ref="lookup_invoke_model" />
+        </record>
+    </data>
+</odoo>

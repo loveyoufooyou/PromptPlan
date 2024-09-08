@@ -1,0 +1,31 @@
+.response_container {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge  */
+}
+
+.response_group {
+    border-bottom: 1px solid #ccc !important;
+}
+
+/* Webkit */
+.response_container::-webkit-scrollbar { 
+    width: 0 !important;
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.response_container::-webkit-scrollbar-thumb {
+    background: transparent; /* thumb transparent */
+}
+
+.response_container::-webkit-scrollbar-track {
+    background: transparent; /* track transparent */
+}
+
+.button_nowrap {
+    white-space: nowrap !important;
+}
