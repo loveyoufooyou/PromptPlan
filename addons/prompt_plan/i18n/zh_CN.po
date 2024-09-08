@@ -1,0 +1,511 @@
+# Translation of Odoo Server.
+# This file is distributed under the same license as the PACKAGE package.
+# Chaox <popone321@outlook.com>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: popone321@outlook.com\n"
+"POT-Creation-Date: 2024-09-04 14:54+0800\n"
+"PO-Revision-Date: 2024-09-04 14:54+0800\n"
+"Last-Translator: Chaox <popone321@outlook.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_task__name
+msgid "Name"
+msgstr "名称"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_task__description
+msgid "Description"
+msgstr "简介"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_task__template_ids
+msgid "Templates"
+msgstr "模板"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_task__active
+msgid "Active"
+msgstr "生效"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+msgid "Test"
+msgstr "测试"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+msgid "Prompt Template"
+msgstr "Prompt模板"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__name
+msgid "Name"
+msgstr "名称"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__description
+msgid "Description"
+msgstr "简介"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__status
+msgid "Status"
+msgstr "状态"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__comment
+msgid "Comment"
+msgstr "评价"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__task_id
+msgid "Prompt Task"
+msgstr "Prompt任务"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__active
+msgid "Active"
+msgstr "生效"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__prompt
+msgid "Prompt"
+msgstr "Prompt"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__call_ids
+msgid "Calls"
+msgstr "调用记录"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template__score
+msgid "Score"
+msgstr "得分"
+
+#. module: prompt_plan
+#. odoo-python
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Prompt is already {}"
+msgstr "记录状态已经是 {}"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Not allowed to change existing prompt template, "
+"please set none to prompt_id field first."
+msgstr "不允许修改已存在的prompt模板，请先将prompt_id字段设置为none。"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Save Prompt Template"
+msgstr "保存Prompt模板"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Please fill in all required fields, Model & Check & Score & Response."
+msgstr "请填写所有必填项，包括模型、执行、得分和返回。"
+
+#. module: prompt_plan
+#. odoo-python
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Error: 1 <= response_index:{response_index} <= {test_number}"
+msgstr "错误：1 <= response_index:{response_index} <= {test_number}"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+msgid "Settings"
+msgstr "配置"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Test"
+msgstr "测试"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__prompt_id
+msgid "Prompt"
+msgstr "Prompt"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__input
+msgid "Input"
+msgstr "输入"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__model_id
+msgid "Model"
+msgstr "模型"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__env_id
+msgid "Environment"
+msgstr "环境"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__setting_id
+msgid "Setting"
+msgstr "配置"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__response
+msgid "Response"
+msgstr "返回"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_call__score
+msgid "Score"
+msgstr "得分"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__task_id
+msgid "Prompt Task"
+msgstr "Prompt 任务"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__prompt_id
+msgid "Prompt"
+msgstr "Prompt"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__test_number
+msgid "Test Number"
+msgstr "测试量"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__prompt
+msgid "Prompt"
+msgstr "Prompt"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__input
+msgid "Input"
+msgstr "输入"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__check1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__check2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__check3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__check4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__check5
+msgid "Check"
+msgstr "是否执行"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__project_id1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__project_id2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__project_id3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__project_id4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__project_id5
+msgid "Project"
+msgstr "项目"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__model_id1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__model_id2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__model_id3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__model_id4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__model_id5
+msgid "Model"
+msgstr "模型"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__env_id1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__env_id2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__env_id3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__env_id4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__env_id5
+msgid "Environment"
+msgstr "运行环境"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__setting_id1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__setting_id2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__setting_id3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__setting_id4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__setting_id5
+msgid "Setting"
+msgstr "其他参数配置"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__score1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__score2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__score3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__score4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__score5
+msgid "Score"
+msgstr "得分"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__response1
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__response2
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__response3
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__response4
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test__response5
+msgid "Response"
+msgstr "返回"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_value__name
+msgid "Name"
+msgstr "名称"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_value__code
+msgid "Code"
+msgstr "代码"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_value__value
+msgid "Value"
+msgstr "值"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_value__type_id
+msgid "Type"
+msgstr "类型"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_type__name
+msgid "Name"
+msgstr "名称"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_type__code
+msgid "Code"
+msgstr "代码"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_type__description
+msgid "Description"
+msgstr "描述"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_base_lookup_type__value_ids
+msgid "Values"
+msgstr "Values"
+
+#. module: prompt_plan
+#. odoo-python
+#: code:addons/prompt_plan/models/invoke_models/subprocess_invoke.py:0
+#, python-format
+msgid "Unsupported file format \"{}\", import only supports .zip, .tar and .tar.gz"
+msgstr "不支持的文件格式 \"{}\"，只支持.zip, .tar 和 .tar.gz"
+
+#. module: prompt_plan
+#. odoo-python
+#: code:addons/prompt_plan/models/invoke_models/subprocess_invoke.py:0
+#, python-format
+msgid "Missing required attributes: {}"
+msgstr "缺失必填属性：{}"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_save_wizard__name
+msgid "Template Name"
+msgstr "模板名称"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_save_wizard__description
+msgid "Description"
+msgstr "简介"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_save_wizard__comment
+msgid "Comment"
+msgstr "评价"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_save_wizard__task_id
+msgid "Task"
+msgstr "Prompt任务"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_save_wizard__prompt
+msgid "Prompt"
+msgstr "Prompt"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_save_wizard__save_response
+msgid "Save Response"
+msgstr "保存当期返回记录"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/wizard/prompt_template_test_save_wizard.py:0
+msgid "Name and Prompt are required"
+msgstr "名称和Prompt是必须的"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/wizard/prompt_template_test_save_wizard.py:0
+msgid "No test_id provided"
+msgstr "没有提供test_id"
+
+#. module: prompt_plan
+#: model:ir.actions.act_window,name:prompt_plan.prompt_template_test_project_view_action
+msgid "Project"
+msgstr "项目"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__name
+msgid "Name"
+msgstr "名称"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__description
+msgid "Description"
+msgstr "简介"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__attachment_ids
+msgid "Attachment"
+msgstr "项目文件"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__attachment_count
+msgid "Attachment Count"
+msgstr "附件数量"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__status
+msgid "Status"
+msgstr "状态"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__invoke_model_id
+msgid "Invoke Model"
+msgstr "执行模型"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_project_view_form
+msgid "<b>Upload compressed package (support .zip; .tar; .tar.gz;) </b>"
+msgstr "<b>上传压缩文件（支持 .zip; .tar; .tar.gz;）</b>"
+
+#. module: prompt_plan
+#: model:ir.actions.act_window,name:prompt_plan.prompt_task_view_action
+msgid "Prompt Task"
+msgstr "Prompt任务"
+
+#. module: prompt_plan
+#: model:ir.actions.act_window,name:prompt_plan.prompt_template_view_action
+msgid "Prompt Template"
+msgstr "Prompt模板"
+
+#. module: prompt_plan
+#: model:ir.ui.menu,name:prompt_plan.menu_prompt_plan
+msgid "Prompt Plan"
+msgstr "Prompt规划"
+
+#. module: prompt_plan
+#: model:ir.ui.menu,name:prompt_plan.menu_prompt_task
+msgid "Prompt Task"
+msgstr "Prompt任务"
+
+#. module: prompt_plan
+#: model:ir.ui.menu,name:prompt_plan.menu_prompt_template
+msgid "Prompt Template"
+msgstr "Prompt模板"
+
+#. module: prompt_plan
+#: model:ir.ui.menu,name:prompt_plan.menu_test_project
+msgid "Project"
+msgstr "项目"
+
+#. module: prompt_plan
+#: model:ir.ui.menu,name:prompt_plan.menu_prompt_settings
+msgid "Settings"
+msgstr "设置"
+
+#. module: prompt_plan
+#: model:ir.ui.menu,name:prompt_plan.menu_base_lookup_type_view
+msgid "Lookup Types"
+msgstr "Lookup Types"
+
+#. module: prompt_plan
+#: model:ir.model.fields.selection,name:prompt_plan.selection__prompt_template__status__created
+#: model:ir.model.fields.selection,name:prompt_plan.selection__prompt_template_test_project__status__created
+msgid "Created"
+msgstr "已创建"
+
+#. module: prompt_plan
+#: model:ir.model.fields.selection,name:prompt_plan.selection__prompt_template__status__confirmed
+#: model:ir.model.fields.selection,name:prompt_plan.selection__prompt_template_test_project__status__confirmed
+msgid "Confirmed"
+msgstr "已确认"
+
+#. module: prompt_plan
+#: model:ir.model.fields.selection,name:prompt_plan.selection__prompt_template__status__rejected
+msgid "Rejected"
+msgstr "已拒绝"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
+msgid "Invoke"
+msgstr "执行"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
+msgid "Save Template"
+msgstr "保存模板"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
+msgid "Prompt Template"
+msgstr "模板"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
+msgid "Save"
+msgstr "保存记录"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_project_view_form
+msgid "Attachment"
+msgstr "附件"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_task_view_from
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_view_form
+msgid "To Test"
+msgstr "测试"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_task_view_from
+msgid "Prompt Templates"
+msgstr "Prompt模板"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_task_view_from
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_task_view_from
+msgid "<span class=\"o_stat_text\">Prompt Template</span>"
+msgstr "<span class=\"o_stat_text\">相关模板</span>"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_task_view_from
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_view_form
+msgid "Calling"
+msgstr "调用记录"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_view_form
+msgid "Confirm"
+msgstr "确认"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_view_form
+msgid "Reject"
+msgstr "拒绝"
