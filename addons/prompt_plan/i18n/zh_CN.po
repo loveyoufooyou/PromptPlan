@@ -18,6 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: prompt_plan
+#: model:res.groups,name:prompt_plan.group_prompt_plan_user
+msgid "User"
+msgstr "用户"
+
+#. module: prompt_plan
+#: model:res.groups,name:prompt_plan.group_prompt_plan_manager
+msgid "Administrator"
+msgstr "管理员"
+
+#. module: prompt_plan
 #: model:ir.model.fields,field_description:prompt_plan.field_prompt_task__name
 msgid "Name"
 msgstr "名称"
@@ -405,8 +415,9 @@ msgstr "Prompt模板"
 
 #. module: prompt_plan
 #: model:ir.ui.menu,name:prompt_plan.menu_prompt_plan
+#: model:ir.module.category,name:prompt_plan.module_category_prompt_plan
 msgid "Prompt Plan"
-msgstr "Prompt规划"
+msgstr "Prompt计划"
 
 #. module: prompt_plan
 #: model:ir.ui.menu,name:prompt_plan.menu_prompt_task
