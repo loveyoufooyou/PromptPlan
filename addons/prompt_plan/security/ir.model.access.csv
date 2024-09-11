@@ -1,6 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-base_lookup_type,base.lookup.type,model_base_lookup_type,prompt_plan.group_prompt_plan_manager,1,1,1,1
-base_lookup_value,base.lookup.value,model_base_lookup_value,prompt_plan.group_prompt_plan_user,1,1,1,1
+base_lookup_type_manager,base.lookup.type,model_base_lookup_type,prompt_plan.group_prompt_plan_manager,1,1,1,1
+base_lookup_value_manager,base.lookup.value,model_base_lookup_value,prompt_plan.group_prompt_plan_manager,1,1,1,1
+base_lookup_type,base.lookup.type,model_base_lookup_type,prompt_plan.group_prompt_plan_user,1,0,0,0
+base_lookup_value,base.lookup.value,model_base_lookup_value,prompt_plan.group_prompt_plan_user,1,0,0,0
 prompt_task,prompt.task,model_prompt_task,prompt_plan.group_prompt_plan_user,1,1,1,1
 prompt_template,prompt.template,model_prompt_template,prompt_plan.group_prompt_plan_user,1,1,1,1
 prompt_template_call,prompt.template.call,model_prompt_template_call,prompt_plan.group_prompt_plan_user,1,1,1,1
