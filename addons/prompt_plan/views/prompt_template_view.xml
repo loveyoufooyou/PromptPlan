@@ -134,11 +134,11 @@
                                 <field name="active" />
                             </group>
                             <group name="info_mid">
-                                <field name="task_id" readonly="1" />
+                                <field name="task_id" />
                                 <field name="comment" />
                             </group>
                             <group name="info_right">
-                                <field name="score" required="1" />
+                                <field name="score" />
                             </group>
                         </group>
                         <group name="prompt">
@@ -242,7 +242,8 @@
                                     <field name="setting_id1"
                                         domain="[('id', 'in', [setting_id2, setting_id3, setting_id4, setting_id5])]" />
                                     <button string="Save" name="save_call" type="object"
-                                        context="{'response_index': 1}" class="btn-secondary button_nowrap" />
+                                        context="{'response_index': 1}"
+                                        class="btn-secondary button_nowrap" />
                                 </group>
                             </group>
                             <group name="r_1_bottom" class="response1 response_group">
@@ -263,7 +264,8 @@
                                     <field name="setting_id2"
                                         domain="[('id', 'in', [setting_id1, setting_id3, setting_id4, setting_id5])]" />
                                     <button string="Save" name="save_call" type="object"
-                                        context="{'response_index': 2}" class="btn-secondary button_nowrap" />
+                                        context="{'response_index': 2}"
+                                        class="btn-secondary button_nowrap" />
                                 </group>
                             </group>
                             <group name="r_2_bottom" class="response2 response_group">
@@ -284,7 +286,8 @@
                                     <field name="setting_id3"
                                         domain="[('id', 'in', [setting_id1, setting_id2, setting_id4, setting_id5])]" />
                                     <button string="Save" name="save_call" type="object"
-                                        context="{'response_index': 3}" class="btn-secondary button_nowrap" />
+                                        context="{'response_index': 3}"
+                                        class="btn-secondary button_nowrap" />
                                 </group>
                             </group>
                             <group name="r_3_bottom" class="response3 response_group">
@@ -305,7 +308,8 @@
                                     <field name="setting_id4"
                                         domain="[('id', 'in', [setting_id1, setting_id2, setting_id3, setting_id5])]" />
                                     <button string="Save" name="save_call" type="object"
-                                        context="{'response_index': 4}" class="btn-secondary button_nowrap" />
+                                        context="{'response_index': 4}"
+                                        class="btn-secondary button_nowrap" />
                                 </group>
                             </group>
                             <group name="r_4_bottom" class="response4 response_group">
@@ -326,7 +330,8 @@
                                     <field name="setting_id5"
                                         domain="[('id', 'in', [setting_id1, setting_id2, setting_id3, setting_id4])]" />
                                     <button string="Save" name="save_call" type="object"
-                                        context="{'response_index': 5}" class="btn-secondary button_nowrap" />
+                                        context="{'response_index': 5}"
+                                        class="btn-secondary button_nowrap" />
                                 </group>
                             </group>
                             <group name="r_5_bottom" class="response5 response_group">
@@ -398,10 +403,15 @@
                     </group>
                     <notebook>
                         <page name="attachment" string="Attachment">
-                            <field name="attachment_ids" widget="many2many_binary" nolabel="1" />
-                            <p>
-                                <b>Upload compressed package (support .zip; .tar; .tar.gz;) </b>
-                            </p>
+                            <group col="1">
+                                <group>
+                                    <field name="is_security_file" />
+                                </group>
+                                <field name="attachment_ids" widget="many2many_binary" nolabel="1" />
+                                <p>
+                                    <b>Upload compressed package (support .zip; .tar; .tar.gz;) </b>
+                                </p>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>

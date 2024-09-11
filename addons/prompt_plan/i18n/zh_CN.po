@@ -129,6 +129,12 @@ msgid "Please fill in all required fields, Model & Check & Score & Response."
 msgstr "请填写所有必填项，包括模型、执行、得分和返回。"
 
 #. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Please select a prompt template"
+msgstr "请选则一个Prompt模板"
+
+#. module: prompt_plan
 #. odoo-python
 #: code:addons/prompt_plan/models/prompt_template.py:0
 #, python-format
@@ -382,6 +388,21 @@ msgstr "简介"
 #: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__attachment_ids
 msgid "Attachment"
 msgstr "项目文件"
+
+#. module: prompt_plan
+#: model:ir.model.fields,help:prompt_plan.field_prompt_template_test_project__attachment_ids
+msgid "Only the first file will be used."
+msgstr "只使用第一个文件"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__is_security_file
+msgid "Security File"
+msgstr "安全文件"
+
+#. module: prompt_plan
+#: model:ir.model.fields,help:prompt_plan.field_prompt_template_test_project__is_security_file
+msgid "When it is set to True, the execution uses attachments."
+msgstr "当它设置为True时候，执行会使用附件。"
 
 #. module: prompt_plan
 #: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__attachment_count
