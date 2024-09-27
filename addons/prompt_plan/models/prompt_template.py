@@ -468,6 +468,15 @@ class PromptTemplateTest(models.TransientModel):
             call_ids_val = self.generate_call_ids_val(response_index)
             if call_ids_val:
                 self.env['prompt.template.call'].create(call_ids_val)
+                return {
+                    'type': 'ir.actions.client',
+                    'tag': 'display_notification',
+                    'params': {
+                        'type': 'success',
+                        'message': _('Save Successfully'),
+                        'next': {'type': 'ir.actions.act_window_close'},
+                    }
+                }
             else:
                 raise ValidationError(
                     _('Please fill in all required fields, Model & Check & Score & Response.')
@@ -478,6 +487,21 @@ class PromptTemplateTest(models.TransientModel):
                     response_index=response_index, test_number=self.test_number,
                 ))
             )
+
+    def save_call_multi(self):
+        response_indexes = self._context.get('response_indexes', [])
+        for index in response_indexes:
+            self.with_context({'response_index': index}).save_call()
+        else:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'type': 'success',
+                    'message': _('Save Successfully'),
+                    'next': {'type': 'ir.actions.act_window_close'},
+                }
+            }
 
     @api.onchange('prompt_id')
     def _onchange_prompt_id(self):

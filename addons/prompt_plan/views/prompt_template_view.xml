@@ -210,6 +210,9 @@
                     <header>
                         <button string="Invoke" name="invoke" type="object" class="oe_highlight" />
                         <button string="Save Template" name="save_template" type="object" />
+                        <button name="%(prompt_plan.action_prompt_calls)d"
+                            class="oe_stat_button" string="Quick Comparison" type="action">
+                        </button>
                     </header>
                     <field name="task_id" invisible="1" />
                     <group col="2">

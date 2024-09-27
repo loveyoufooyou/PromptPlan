@@ -1,0 +1,127 @@
+:root {
+    --prompt-color: rgb(197, 212, 237);
+    --prompt-select-color: rgb(211, 227, 253);
+
+    --prompt-color-active: #f8994c;
+    --prompt-select-color-active: #f9b47b;
+}
+
+.prompt-calls-show {
+    background-color: var(--prompt-color);
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.prompt-score {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: sticky;
+    background-color: var(--prompt-color);
+    padding: 5px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.prompt-score-select {
+    background-color: var(--prompt-select-color) !important;
+    width: 50% !important;
+}
+.prompt-score-select:disabled {
+    background-color: var(--gray-200) !important;
+}
+
+.prompt-score-select > option {
+    width: 50%;
+}
+
+.prompt-tag {
+    margin-left: 5px;
+    background-color: var(--prompt-select-color);
+}
+
+.prompt-score-select-active {
+    background-color: var(--prompt-select-color-active) !important;
+}
+
+.prompt-tag-active {
+    background-color: var(--prompt-select-color-active) !important;
+    display: none;
+}
+
+.prompt-calls-show-active,
+.prompt-score-active {
+    background-color: var(--prompt-color-active) !important;
+}
+
+.prompt-score-response {
+    margin: 5px;
+    z-index: 1;
+}
+
+.prompt-header {
+    padding: 5px;
+    text-align: center;
+}
+
+.prompt-input {
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.scrollable-container {
+    margin-top: 5px;
+    overflow-x: auto;
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+@media (min-width: 992px) {
+    .scrollable-container {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .scrollable-container {
+        max-width: auto;
+        overflow-x: visible;
+        white-space: normal;
+    }
+
+    .scrollable-row {
+        display: block;
+        flex-wrap: wrap !important;
+    }
+
+    .first-prompt {
+        max-height: 160px;
+        border-bottom: 3px;
+    }
+}
+
+.scrollable-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.first-prompt {
+    position: sticky;
+    top: 0;
+    left: -15px;
+    z-index: 3;
+    border-right: white 1px solid;
+    border-bottom: white 1px solid;
+}
+
+.show-tag-response {
+    max-height: 500px;
+}

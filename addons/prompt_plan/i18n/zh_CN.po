@@ -131,6 +131,12 @@ msgstr "请填写所有必填项，包括模型、执行、得分和返回。"
 #. module: prompt_plan
 #: code:addons/prompt_plan/models/prompt_template.py:0
 #, python-format
+msgid "Save Successfully"
+msgstr "保存成功"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
 msgid "Please select a prompt template"
 msgstr "请选则一个Prompt模板"
 
@@ -494,6 +500,11 @@ msgstr "保存模板"
 
 #. module: prompt_plan
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
+msgid "Quick Comparison"
+msgstr "快速比较"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
 msgid "Prompt Template"
 msgstr "模板"
 
@@ -541,3 +552,45 @@ msgstr "确认"
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_view_form
 msgid "Reject"
 msgstr "拒绝"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Operation failed for unknown reason."
+msgstr "由于未知原因，操作失败。"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Error to get test number, please return to the test screen."
+msgstr "获取测试量错误，请返回测试页面。"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Please select a tag first."
+msgstr "请先打一个标签"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Previous Page"
+msgstr "上一页"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.xml:0
+#, python-format
+msgid "Deactive"
+msgstr "退出"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.xml:0
+#, python-format
+msgid "Comparison Model"
+msgstr "比较模式"

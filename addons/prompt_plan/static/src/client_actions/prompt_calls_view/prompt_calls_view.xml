@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+
+    <t t-name="prompt_plan.prompt_calls_view_template">
+        <div class="d-flex justify-content-center align-items-center prompt-header">
+            <button t-on-click="() => this.saveScore()" class="btn btn-sm btn-primary">Save</button>
+            <t t-if="this.state.contrast === true">
+                <button t-on-click="() => this.deactiveContrastModel()" class="btn btn-sm btn-secondary">Deactive</button>
+            </t>
+            <t t-else="">
+                <button t-on-click="() => this.contrastModel()" class="btn btn-sm btn-secondary">Comparison Model</button>
+            </t>
+            <span t-attf-title="{{ this.state.input }}" class="prompt-input">
+                <t t-out="this.state.input_part" />
+            </span>
+        </div>
+        <div class="container scrollable-container">
+            <t t-set="fetchedDatas" t-value="this.state.fetchedDatas" />
+            <t t-set="activeIndex" t-value="this.state.activeIndex" />
+            <t t-if="this.state.contrast === true">
+                <div class="row justify-content-around scrollable-row prompt-sortable-row">
+                    <t t-set="data" t-value="fetchedDatas[activeIndex-1]" />
+                    <div t-attf-id="prompt-tmplate{{ data['index'] }}"
+                        t-on-click="() => this.showTagResponse()"
+                        class="col-12 col-sm-12 col-md-12 col-lg-4 prompt-calls-show prompt-calls-show-active first-prompt">
+                        <div class="prompt-score prompt-score-active"
+                            t-attf-id="score-tmplate{{ data['index'] }}">
+                            <select name="Score" t-attf-id="score{{ data['index'] }}"
+                                t-attf-disabled="{{ !data['check'] }}"
+                                class="o_import_create_option form-select w-auto bg-light prompt-score-select prompt-score-select-active">
+                                <option value="false"
+                                    t-attf-selected="{{ data['score'] == false }}"></option>
+                                <option value="A+"
+                                    t-attf-selected="{{ data['score'] == 'A+' }}">A+</option>
+                                <option value="A"
+                                    t-attf-selected="{{ data['score'] == 'A' }}">A</option>
+                                <option value="B+"
+                                    t-attf-selected="{{ data['score'] == 'B+' }}">B+</option>
+                                <option value="B"
+                                    t-attf-selected="{{ data['score'] == 'B' }}">B</option>
+                                <option value="C+"
+                                    t-attf-selected="{{ data['score'] == 'C+' }}">C+</option>
+                                <option value="C"
+                                    t-attf-selected="{{ data['score'] == 'C' }}">C</option>
+                            </select>
+                        </div>
+                        <div class="prompt-score-response">
+                            <p>
+                                <t t-out="data['response']" />
+                            </p>
+                        </div>
+                    </div>
+                    <t t-foreach="fetchedDatas" t-as="data" t-key="data['index']">
+                        <t t-if="data['index'] !== activeIndex">
+                            <div t-attf-id="prompt-tmplate{{ data['index'] }}"
+                                t-on-click="() => this.dontShowTagResponse()"
+                                class="col-12 col-sm-12 col-md-12 col-lg-4 prompt-calls-show">
+                                <div class="prompt-score" t-attf-id="score-tmplate{{ data['index'] }}">
+                                    <select name="Score" t-attf-id="score{{ data['index'] }}"
+                                        t-attf-disabled="{{ !data['check'] }}"
+                                        class="o_import_create_option form-select w-auto bg-light prompt-score-select">
+                                        <option value="false"
+                                            t-attf-selected="{{ data['score'] == false }}"></option>
+                                        <option value="A+"
+                                            t-attf-selected="{{ data['score'] == 'A+' }}">A+</option>
+                                        <option value="A"
+                                            t-attf-selected="{{ data['score'] == 'A' }}">A</option>
+                                        <option value="B+"
+                                            t-attf-selected="{{ data['score'] == 'B+' }}">B+</option>
+                                        <option value="B"
+                                            t-attf-selected="{{ data['score'] == 'B' }}">B</option>
+                                        <option value="C+"
+                                            t-attf-selected="{{ data['score'] == 'C+' }}">C+</option>
+                                        <option value="C"
+                                            t-attf-selected="{{ data['score'] == 'C' }}">C</option>
+                                    </select>
+                                    <button t-attf-id="tag{{ data['index'] }}"
+                                        class="btn btn-sm btn-secondary prompt-tag"
+                                        t-on-click="() => this.aciveTag(data['index'])">Tag</button>
+                                </div>
+                                <div class="prompt-score-response">
+                                    <p>
+                                        <t t-out="data['response']" />
+                                    </p>
+                                </div>
+                            </div>
+                        </t>
+                    </t>
+                </div>
+            </t>
+            <t t-else="">
+                <div class="row justify-content-around scrollable-row prompt-sortable-row">
+                    <div t-foreach="fetchedDatas" t-as="data" t-key="data['index']"
+                        t-attf-id="prompt-tmplate{{ data['index'] }}"
+                        t-attf-class="col-12 col-sm-12 col-md-12 col-lg-4 prompt-calls-show {{ data['index'] == activeIndex ? 'prompt-calls-show-active' : '' }}">
+                        <div t-attf-class="prompt-score {{ data['index'] == activeIndex ? 'prompt-score-active' : '' }}"
+                            t-attf-id="score-tmplate{{ data['index'] }}">
+                            <select name="Score" t-attf-id="score{{ data['index'] }}"
+                                t-attf-disabled="{{ !data['check'] }}"
+                                t-attf-class="o_import_create_option form-select w-auto bg-light prompt-score-select {{ data['index'] == activeIndex ? 'prompt-score-select-active' : '' }}">
+                                <option value="false" t-attf-selected="{{ data['score'] == false }}"></option>
+                                <option value="A+" t-attf-selected="{{ data['score'] == 'A+' }}">A+</option>
+                                <option value="A" t-attf-selected="{{ data['score'] == 'A' }}">A</option>
+                                <option value="B+" t-attf-selected="{{ data['score'] == 'B+' }}">B+</option>
+                                <option value="B" t-attf-selected="{{ data['score'] == 'B' }}">B</option>
+                                <option value="C+" t-attf-selected="{{ data['score'] == 'C+' }}">C+</option>
+                                <option value="C" t-attf-selected="{{ data['score'] == 'C' }}">C</option>
+                            </select>
+                            <button t-attf-id="tag{{ data['index'] }}"
+                                t-attf-class="btn btn-sm btn-secondary prompt-tag {{ data['index'] == activeIndex ? 'prompt-tag-active' : '' }}"
+                                t-on-click="() => this.aciveTag(data['index'])">Tag</button>
+                        </div>
+                        <div class="prompt-score-response">
+                            <p>
+                                <t t-out="data['response']" />
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+            <div style="height: 50px" class="d-md-block d-lg-none"></div>
+        </div>
+    </t>
+
+</templates>
