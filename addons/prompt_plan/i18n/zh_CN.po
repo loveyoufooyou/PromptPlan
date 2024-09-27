@@ -18,6 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: prompt_plan
+#: model:res.groups,name:prompt_plan.group_prompt_plan_user
+msgid "User"
+msgstr "用户"
+
+#. module: prompt_plan
+#: model:res.groups,name:prompt_plan.group_prompt_plan_manager
+msgid "Administrator"
+msgstr "管理员"
+
+#. module: prompt_plan
 #: model:ir.model.fields,field_description:prompt_plan.field_prompt_task__name
 msgid "Name"
 msgstr "名称"
@@ -117,6 +127,18 @@ msgstr "保存Prompt模板"
 #, python-format
 msgid "Please fill in all required fields, Model & Check & Score & Response."
 msgstr "请填写所有必填项，包括模型、执行、得分和返回。"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Save Successfully"
+msgstr "保存成功"
+
+#. module: prompt_plan
+#: code:addons/prompt_plan/models/prompt_template.py:0
+#, python-format
+msgid "Please select a prompt template"
+msgstr "请选则一个Prompt模板"
 
 #. module: prompt_plan
 #. odoo-python
@@ -374,6 +396,21 @@ msgid "Attachment"
 msgstr "项目文件"
 
 #. module: prompt_plan
+#: model:ir.model.fields,help:prompt_plan.field_prompt_template_test_project__attachment_ids
+msgid "Only the first file will be used."
+msgstr "只使用第一个文件"
+
+#. module: prompt_plan
+#: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__is_security_file
+msgid "Security File"
+msgstr "安全文件"
+
+#. module: prompt_plan
+#: model:ir.model.fields,help:prompt_plan.field_prompt_template_test_project__is_security_file
+msgid "When it is set to True, the execution uses attachments."
+msgstr "当它设置为True时候，执行会使用附件。"
+
+#. module: prompt_plan
 #: model:ir.model.fields,field_description:prompt_plan.field_prompt_template_test_project__attachment_count
 msgid "Attachment Count"
 msgstr "附件数量"
@@ -405,8 +442,9 @@ msgstr "Prompt模板"
 
 #. module: prompt_plan
 #: model:ir.ui.menu,name:prompt_plan.menu_prompt_plan
+#: model:ir.module.category,name:prompt_plan.module_category_prompt_plan
 msgid "Prompt Plan"
-msgstr "Prompt规划"
+msgstr "Prompt计划"
 
 #. module: prompt_plan
 #: model:ir.ui.menu,name:prompt_plan.menu_prompt_task
@@ -462,6 +500,11 @@ msgstr "保存模板"
 
 #. module: prompt_plan
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
+msgid "Quick Comparison"
+msgstr "快速比较"
+
+#. module: prompt_plan
+#: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
 msgid "Prompt Template"
 msgstr "模板"
 
@@ -509,3 +552,45 @@ msgstr "确认"
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_view_form
 msgid "Reject"
 msgstr "拒绝"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Operation failed for unknown reason."
+msgstr "由于未知原因，操作失败。"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Error to get test number, please return to the test screen."
+msgstr "获取测试量错误，请返回测试页面。"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Please select a tag first."
+msgstr "请先打一个标签"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.js:0
+#, python-format
+msgid "Previous Page"
+msgstr "上一页"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.xml:0
+#, python-format
+msgid "Deactive"
+msgstr "退出"
+
+#. module: prompt_plan
+#. odoo-javascript
+#: code:addons/prompt_plan/static/src/client_actions/prompt_calls_view/prompt_calls_view.xml:0
+#, python-format
+msgid "Comparison Model"
+msgstr "比较模式"

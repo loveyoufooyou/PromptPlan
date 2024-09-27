@@ -25,5 +25,10 @@
             <field name="value">subprocess.invoke</field>
             <field name="type_id" ref="lookup_invoke_model" />
         </record>
+
+        <record id="action_prompt_calls" model="ir.actions.client">
+            <field name="name">Prompt Calls View</field>
+            <field name="tag">prompt_calls_view_tag</field>
+        </record>
     </data>
 </odoo>

@@ -345,9 +345,10 @@ class PromptTemplateTest(models.TransientModel):
                     response = ''
                     attachment = None
                     if project_id:
-                        attachment = project_id.attachment_ids[0]
+                        if project_id.is_security_file:
+                            attachment = project_id.attachment_ids[0]
                         invoke_model_id = project_id.invoke_model_id
-                    if attachment and invoke_model_id:
+                    if invoke_model_id:
                         settings = self.get_settings(i)
                         invoke_records.append({
                             'id': record._origin.id,
@@ -368,7 +369,7 @@ class PromptTemplateTest(models.TransientModel):
                 queue.put(f'[{rec_id}:{index}]{response}')
             except Exception as e:
                 queue.put(f'[{rec_id}:{index}]{e}')
-        _logger.error(f'invoke_records: {invoke_records}')
+        _logger.info(f'invoke_records: {invoke_records}')
         result_queue = Queue()
         threads = []
         for invoke in invoke_records:
@@ -461,12 +462,21 @@ class PromptTemplateTest(models.TransientModel):
     def save_call(self):
         self.ensure_one()
         if not self.prompt_id:
-            raise ValidationError('Please select a prompt template')
+            raise ValidationError(_('Please select a prompt template'))
         response_index = self._context.get('response_index')
         if response_index and (1 <= response_index <= self.test_number):
             call_ids_val = self.generate_call_ids_val(response_index)
             if call_ids_val:
                 self.env['prompt.template.call'].create(call_ids_val)
+                return {
+                    'type': 'ir.actions.client',
+                    'tag': 'display_notification',
+                    'params': {
+                        'type': 'success',
+                        'message': _('Save Successfully'),
+                        'next': {'type': 'ir.actions.act_window_close'},
+                    }
+                }
             else:
                 raise ValidationError(
                     _('Please fill in all required fields, Model & Check & Score & Response.')
@@ -477,6 +487,21 @@ class PromptTemplateTest(models.TransientModel):
                     response_index=response_index, test_number=self.test_number,
                 ))
             )
+
+    def save_call_multi(self):
+        response_indexes = self._context.get('response_indexes', [])
+        for index in response_indexes:
+            self.with_context({'response_index': index}).save_call()
+        else:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'type': 'success',
+                    'message': _('Save Successfully'),
+                    'next': {'type': 'ir.actions.act_window_close'},
+                }
+            }
 
     @api.onchange('prompt_id')
     def _onchange_prompt_id(self):
@@ -492,7 +517,7 @@ class PromptTemplateTest(models.TransientModel):
             field: getattr(setting_id, field)
             for field in setting_id._fields if field not in filter_fields
         }
-        settings['model'] = model_id.code
+        settings['model'] = model_id.value
         return settings
 
 
@@ -544,10 +569,15 @@ class PromptTemplateTestProject(models.Model):
 
     name = fields.Char(string='Name')
     description = fields.Char(string='Description')
+    is_security_file = fields.Boolean(
+        string='Security File', default=False,
+        help='When it is set to True, the execution uses attachments.',
+    )
     attachment_ids = fields.Many2many(
         comodel_name='ir.attachment', string='Attachment',
         relation='test_project_attachment_rel',
         column1='test_project_id', column2='attachment_id',
+        help='Only the first file will be used.',
     )
     attachment_count = fields.Integer(
         string='Attachment Count', compute='_compute_attachment_len',
