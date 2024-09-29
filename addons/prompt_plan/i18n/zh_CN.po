@@ -490,18 +490,18 @@ msgstr "已拒绝"
 
 #. module: prompt_plan
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
-msgid "Invoke"
-msgstr "执行"
+msgid "<span class=\"o_stat_text\">Invoke</span>"
+msgstr "<span class=\"o_stat_text\">执行</span>"
 
 #. module: prompt_plan
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
-msgid "Save Template"
-msgstr "保存模板"
+msgid "<span class=\"o_stat_text\">Save Template</span>"
+msgstr "<span class=\"o_stat_text\">保存模板</span>"
 
 #. module: prompt_plan
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form
-msgid "Quick Comparison"
-msgstr "快速比较"
+msgid "<span class=\"o_stat_text\">Quick Comparison</span>"
+msgstr "<span class=\"o_stat_text\">快速比较</span>"
 
 #. module: prompt_plan
 #: model_terms:ir.ui.view,arch_db:prompt_plan.prompt_template_test_view_form

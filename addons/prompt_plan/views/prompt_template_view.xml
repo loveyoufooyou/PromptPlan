@@ -207,13 +207,26 @@
         <field name="arch" type="xml">
             <form js_class="prompt_template_test">
                 <sheet>
-                    <header>
-                        <button string="Invoke" name="invoke" type="object" class="oe_highlight" />
-                        <button string="Save Template" name="save_template" type="object" />
-                        <button name="%(prompt_plan.action_prompt_calls)d"
-                            class="oe_stat_button" string="Quick Comparison" type="action">
+                    <div name="button_box" class="oe_button_box">
+                        <button class="oe_highlight" type="object"
+                            name="invoke" icon="fa-play">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Invoke</span>
+                            </div>
                         </button>
-                    </header>
+                        <button class="oe_stat_button" type="object"
+                            name="save_template" icon="fa-save">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Save Template</span>
+                            </div>
+                        </button>
+                        <button class="oe_stat_button" type="action"
+                            name="%(prompt_plan.action_prompt_calls)d" icon="fa-balance-scale">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Quick Comparison</span>
+                            </div>
+                        </button>
+                    </div>
                     <field name="task_id" invisible="1" />
                     <group col="2">
                         <group name="prompt" col="1">
